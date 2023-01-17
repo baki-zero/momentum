@@ -1,23 +1,23 @@
 const calculator = {
     add : function(a, b) {	//µ¡¼À
-        console.log(a+b);
+        return a+b;
     },
     sub : function(a, b) {	//»¬¼À
-        console.log(a-b);
+        return a-b;
     },
     div : function(a, b) {	//³ª´°¼À
-        console.log(a/b);
+        return a/b;
     },
     mul : function(a, b) {	//°ö¼À
-        console.log(a*b);
+        return a*b;
     },
     squ : function(a, b) {	//Á¦°ö
-        console.log(a**b);
+        return a**b;
     },
 }
 
-calculator.add(1, 1);
-calculator.sub(15, 5);
-calculator.div(20, 5);
-calculator.mul(2, 50);
-calculator.squ(2, 10);
+const addResult = calculator.add(1, 1);
+const subResult = calculator.sub(addResult, 0);
+const divResult = calculator.div(20, subResult);
+const mulResult = calculator.mul(divResult, addResult);
+const squResult = calculator.squ(mulResult, subResult);
