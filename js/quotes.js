@@ -39,11 +39,11 @@ const quotes = [
     quote: 'If you really want to do something, you will find a way. If you do not, you will find an excuse.',
     author: 'Jim Rohn'
     },
-    ];
+    ];                                                                  //명언 10개와 작가 10명을 quotes 배열에 저장
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
+const quote = document.querySelector("#quote span:first-child");        //quote 변수에 HTML에서 quote라는 id의 첫번쨰 span을 대입
+const author = document.querySelector("#quote span:last-child");        //author 변수에 HTML에서 quote라는 id의 마지막 span을 대입
 
-const todaysQuote = quotes[Math.floor(Math.random()*quotes.length)];
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+const todaysQuote = quotes[Math.floor(Math.random()*quotes.length)];    //todaysQuote 변수에 quotes 배열의 인덱스 값을 랜덤으로 지정하여 대입
+quote.innerText = todaysQuote.quote;                                    //quote변수에 todaysQuote의 quote를 대입
+author.innerText = todaysQuote.author;                                  //quote변수에 todaysQuote의 author을 대입
