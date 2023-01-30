@@ -2,10 +2,12 @@ const toDoForm = document.getElementById("todo-form");  //html에서 id가 todo-for
 const toDoInput = toDoForm.querySelector("input");      //html에서 todo-form의 input 태그를 가져온다.
 const toDoList = document.getElementById("todo-list");  //html에서 id가 todo-list인 태그를 가져온다.
 
-const toDos = [];
+const TODOS_KEY = "todos";
+
+let toDos = [];
 
 function saveToDos() {                                      //toDos 배열의 내용을 localStorage에 넣는 함수
-    localStorage.setItem("todos", JSON.stringify(toDos));   //todos 라는 키에다 toDos의 값을 배열의 형태로 localStorage에 저장
+    localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));   //todos 라는 키에다 toDos의 값을 배열의 형태로 localStorage에 저장
 }
 
 function deleteToDo(event) {                            //event를 매개변수로 받아 todo를 삭제하는 함수
@@ -35,3 +37,15 @@ function handleToDoSubmit(event) {                      //todo를 submit할 때 다�
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);  //toDoForm에 submit 이벤트 리스너 추가 후, 이벤트 발생시 handleToDoSubmit 함수 실행
+
+function sayHello(item) {
+    console.log("Hello", item);
+}
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+if (savedToDos != null) {                               //만약 savedToDos가 null이 아니라면
+    const parsedToDos = JSON.parse(savedToDos);         //parsedToDos에 savedToDos를 배열로 변환시켜 저장
+    toDos = parsedToDos;
+    parsedToDos.forEach(paintToDo);
+}
