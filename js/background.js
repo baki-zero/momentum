@@ -7,4 +7,4 @@ const bgImage = document.createElement("img");  //HTML¿¡ img¶ó´Â ÅÂ±×¸¦ »ı¼ºÇÑ È
 bgImage.src = `img/${chosenImage}`;             //bgImageÀÇ src ÅÂ±×¿¡ ·£´ıÀ¸·Î ³ÖÀ» ¹è°æ»çÁø ¹è¿­ÀÇ °ª ÁöÁ¤
 
 document.body.appendChild(bgImage);             //HTMLÀÇ body ÅÂ±× ÇÏÀ§¿¡ bgImageÅÂ±× ³ÖÀ½
-bgImage.classList.add("img");                   //bgImage ÅÂ±×ÀÇ Å¬·¡½º img(css)¸¦ ³ÖÀ½
+bgImage.classList.add("bg_img");                //bgImage ÅÂ±×ÀÇ Å¬·¡½º img(css)¸¦ ³ÖÀ½

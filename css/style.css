@@ -1,8 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+
+* {
+    position : 0;
+    padding : 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Sniglet', cursive;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: -0.5px;
+    line-height: 100%;
+    list-style: none;
+    vertical-align: baseline;
+    background: transparent;
+    transition: all .3s ease-in-out;
+}
+
 .hidden {
     display: none;
 }
 
-.img {
+.bg_img {
     position:absolute;
     width:100%;
     height:100%;
@@ -11,5 +30,15 @@
     right:0px;
     bottom:0px;
     z-index: -1;
-    opacity:80%;
+    /*opacity:70%;*/
+    background-blend-mode: multiply;
+}
+
+#weather {
+    padding: 20px;
+}
+
+#clock {
+    text-align: center;
+    font-size: 50px;
 }
